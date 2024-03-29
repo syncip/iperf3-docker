@@ -1,0 +1,11 @@
+services:
+    iperf3:
+        container_name: iperf3
+        build: .
+        #image: networkstatic/iperf3
+        environment:
+          - "port=5201"   # optional, start port
+          - "one=true"    # optional, shutdown after one run
+          - "instances=5" # optional, number of instances
+        ports:
+            - 5201-5205:5201-5205
