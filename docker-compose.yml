@@ -1,8 +1,7 @@
 services:
     iperf3:
         container_name: iperf3
-        build: .
-        #image: networkstatic/iperf3
+        image: r600/iperf3:latest
         environment:
           - "port=5201"   # optional, start port
           - "one=true"    # optional, shutdown after one run
